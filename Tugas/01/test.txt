@@ -1,0 +1,7 @@
+https://absensi.wastu.digital/dosen/Url_simak?nidn=405019001&nm_dsn=IRSAN%20JAELANI&jenis=dosen&tahun_akademik=20221&status=1&nupn=405019001&url=dosen/absen&tema=modern
+
+https://absensi.wastu.digital/mahasiswa/Url_simak?nim=211351068&nm_mhs=IRGIYANSYAH&jenis=mhs&id_kelas=&nama_kelas=Malam%20B&tahun_akademik=20221&id_sms=5&id_level=4&status=1&nipd=211351068&nm_pd=IRGIYANSYAH&id_pd=6157&url=mhs/rekap_absen&tema=modern
+
+https://absensi.wastu.digital/dosen/Url_simak?&nidn=0412067206&=&nm_dosen=SUTARDJO&jenis=dosen&tahun_akademik=20212&gelar=&id_sms=6&id_level=5&url=dosen/absen&tema=modern
+
+NIDN. 0412067206
