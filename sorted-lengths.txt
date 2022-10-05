@@ -1,0 +1,5 @@
+   97 Tugas Kerkom1/graph1.ipynb
+  124 explore/20sep22/tees.ipynb
+  166 Tugas Kerkom1/graph.ipynb
+  178 explore/20sep22/tuples.ipynb
+  565 total

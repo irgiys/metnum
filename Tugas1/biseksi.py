@@ -1,3 +1,6 @@
+# definisi fungsi f(x) untuk kalkulasi variabel/parameter x
+# yang akan kita gunakan untuk mencari akar dari persamaan
+# 2,05*x^3-1,12*x^3-4,23
 def f(x):
     return 2.05*x**3-1.12*x**3-4.23
 
@@ -14,12 +17,13 @@ def bisection(a, b, e=10**-4, n=100):
             a = c
         step = step + 1
         condition = abs(f(c)) > e and step <= n
+      #   print(f"{condition} \t abs = {abs(f(c))}")
     print('\nDitemukan, akarnya adalah: %0.4f' % c)
 
 a = float(1)
 b = float(2)
 
 if f(a) * f(b) > 0.0:
-    print('Nilai yang diberikan harus diantara akar.')
+    print('Rumus persamaan tidak memiliki akar')
 else:
     bisection(a, b)
