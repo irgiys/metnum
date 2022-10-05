@@ -1,36 +1,56 @@
+"""
+   Definisi fungsi f(x) untuk melakukan perhitungan variabel/parameter x
+   dari persamaan 4,15*x^5-2,23*x^3-6,35
+"""
 def f(x):
     return 4.15*x**5-2.23*x**3-6.35
 
+"""
+   Definisi fungsi biseksi untuk mencari akar dari nilai parameter a dan b
+"""
 def bisection(a, b):
     print("="*45)
-    eps = 10**-4
-    counter = 1
+    # Inisialisasi toleransi untuk akar yang akan dicari yaitu 10^-4 atau 0.0001
+    toleransi = 10**-4
+    # Variable opsional untuk mengetahui berapakali iterasi dilakukan
+    iteration = 1
+    # Variable kondisi untuk menentukan kapan iterasi berhenti
     condition = True
     
+   #  Ketika condition True jalankan iterasi
     while condition:
+        # Inialisasi variable c untuk mencari nilai tengah antara a dan b
         c = (a + b) / 2
-        error = b - a
-
-        print('Iterasi ke-%d, \tC = %0.4f dan f(C) = %0.4f' % (counter, c, f(c)))
-      
-        if f(a) * f(c) >= 0:
+        """
+            Tampilkan output
+            %d yaitu placeholder untuk desimal ataupun integer, yang mengarah pada variable iteration
+            %0.4f yaitu placeholder dan formatting agar menerapkan 4 angka dibelakang koma untuk variable c dan f(c)
+        """
+        print('Iterasi ke-%d, \tC = %0.4f dan f(C) = %0.4f' % (iteration, c, f(c)))
+        #  Jika fungsi a dikali fungsi c lebih dari 0 maka nilai variable a diganti dengan variable c
+        if f(a) * f(c) > 0:
             a = c
-        elif f(b) * f(c) >= 0:
+        #  Jika fungsi b dikali fungsi c lebih dari 0 maka nilai variable b diganti dengan variable c
+        if f(b) * f(c) > 0:
             b = c
-
-        counter += 1
-        akar = error <= eps
-      #   print(f"f(c) = {abs(f(c))} {akar}")
-      #   condition = abs(f(c)) > eps
-        print(f"akar {akar}") 
-        condition = not akar 
+        #  nilai variabel iteration naik +1 ketika iterasi dilakukan
+        iteration += 1
+        #  condition akan tetap True jika f(c) lebih dari toleransi
+        #  fungsi abs adalah fungsi yang akan mengembalikan nilai absolute dari sebuah number
+        condition = abs(f(c)) > toleransi
     print("="*45)
+    #  Tampilkan output akar
     print('\nAkarnya adalah: %0.4f' % c, "\n")
 
+"""
+   Inisialisasi variable a untuk batas atas dan b untuk batas bawah 
+""" 
 a = float(1)
 b = float(2)
 
+#  Jika fungsi a dikali fungsi b kurang dari 0 maka jalankan fungsi biseksi diatas
 if f(a) * f(b) < 0 :
     bisection(a, b)
 else:
-    print('Nilai a dan b bukan diantara akar.')
+#  Selain itu artinya nilai a dan b tidak diantara akar
+    print('Nilai a dan b tidak diantara akar.')
