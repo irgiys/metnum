@@ -16,7 +16,7 @@ def bisection(a, b):
     iteration = 1
     # Variable kondisi untuk menentukan kapan iterasi berhenti
     condition = True
-    
+
    #  Ketika condition True jalankan iterasi
     while condition:
         # Inialisasi variable c untuk mencari nilai tengah antara a dan b
