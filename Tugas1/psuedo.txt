@@ -1,0 +1,11 @@
+PROGRAM : Biseksi
+
+DEKALARASI : 
+f(x), a, b, c, iterasi, toleransi
+
+ALGORITAMA :
+Read  (a,b,toleransi)
+IF f(a) * f(b) < 0 :
+   toleransi = 10^-4
+   iterasi = 1
+   condition

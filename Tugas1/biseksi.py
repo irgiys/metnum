@@ -11,14 +11,12 @@ def f(x):
 def bisection(a, b):
     print("="*45)
     # Inisialisasi toleransi untuk akar yang akan dicari yaitu 10^-4 atau 0.0001
-    toleransi = 10**-4
+    toleran = 10**-4
     # Variable opsional untuk mengetahui berapakali iterasi dilakukan
     iteration = 1
-    # Variable kondisi untuk menentukan kapan iterasi berhenti
-    condition = True
 
    #  Ketika condition True jalankan iterasi
-    while condition:
+    while True:
         # Inialisasi variable c untuk mencari nilai tengah antara a dan b
         c = (a + b) / 2
         """
@@ -27,17 +25,19 @@ def bisection(a, b):
             %0.4f yaitu placeholder dan formatting agar menerapkan 4 angka dibelakang koma untuk variable c dan f(c)
         """
         print('Iterasi ke-%d, \tC = %0.4f dan f(C) = %0.4f' % (iteration, c, f(c)))
-        #  Jika fungsi a dikali fungsi c lebih dari 0 maka nilai variable a diganti dengan variable c
+        #  Jika f(a) dikali f(c) lebih dari 0 maka nilai a diganti dengan c
         if f(a) * f(c) > 0:
             a = c
-        #  Jika fungsi b dikali fungsi c lebih dari 0 maka nilai variable b diganti dengan variable c
+        #  Jika f(b) dikali f(c) lebih dari 0 maka nilai b diganti dengan c
         if f(b) * f(c) > 0:
             b = c
-        #  nilai variabel iteration naik +1 ketika iterasi dilakukan
+        #  Nilai variable iteration naik +1 ketika iterasi dilakukan
         iteration += 1
-        #  condition akan tetap True jika f(c) lebih dari toleransi
-        #  fungsi abs adalah fungsi yang akan mengembalikan nilai absolute dari sebuah number
-        condition = abs(f(c)) > toleransi
+        #  Jika f(c) kurang dari sama dengan toleransi iterasi selesai
+        #  Fungsi abs adalah fungsi yang akan mengembalikan nilai absolute dari sebuah number
+        if abs(f(c)) <= toleran :
+         break
+      
     print("="*45)
     #  Tampilkan output akar
     print('\nAkarnya adalah: %0.4f' % c, "\n")
