@@ -15,7 +15,7 @@ def bisection(a, b):
     # Variable opsional untuk mengetahui berapakali iterasi dilakukan
     iteration = 1
 
-   #  Ketika condition True jalankan iterasi
+   #  Ketika True jalankan iterasi
     while True:
         # Inialisasi variable c untuk mencari nilai tengah antara a dan b
         c = (a + b) / 2
