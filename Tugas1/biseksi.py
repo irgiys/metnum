@@ -25,10 +25,10 @@ def bisection(a, b):
             %0.4f yaitu placeholder dan formatting agar menerapkan 4 angka dibelakang koma untuk variable c dan f(c)
         """
         print('Iterasi ke-%d, \tC = %0.4f dan f(C) = %0.4f' % (iteration, c, f(c)))
-        #  Jika f(a) dikali f(c) kurang dari 0 maka nilai a diganti dengan c
+        #  Jika f(a) dikali f(c) kurang dari 0 maka nilai b diganti dengan c
         if f(a) * f(c) < 0:
             b = c
-        #  Jika f(b) dikali f(c) kurang dari 0 maka nilai b diganti dengan c
+        #  Jika f(b) dikali f(c) kurang dari 0 maka nilai a diganti dengan c
         if f(b) * f(c) < 0:
             a = c
         #  Nilai variable iteration naik +1 ketika iterasi dilakukan
