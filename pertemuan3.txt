@@ -1,0 +1,11 @@
+
+Error - Pemotongan
+      - Pembulatan
+
+
+dimatematika pangkat hanya memiliki dua jenis genap dan ganjil
+jika genap dari atas ke atas 
+jika ganjil dari bawah ke atas 
+motode tabel cara yang paling sederhana menyeselaikan masalah
+
+integral dan diferensial

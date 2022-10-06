@@ -11,10 +11,10 @@ IF f(a) * f(b) < 0 :
    while True:
       c = (a + b) / 2
       print(iterasi,c,f(c))
-      IF f(a) * f(c) > 0 :
-         a = c
-      IF f(b) * f(c) > 0 :
+      IF f(a) * f(c) < 0 :
          b = c
+      IF f(b) * f(c) < 0 :
+         a = c
       iterasi = iterasi + 1
       IF abs(f(c)) <= toleransi :
          break
