@@ -35,7 +35,7 @@ def bisection(a, b):
         iteration += 1
         #  Jika f(c) kurang dari sama dengan toleransi iterasi selesai
         #  Fungsi abs adalah fungsi yang akan mengembalikan nilai absolute dari sebuah number
-        if abs(f(c)) <= toleran :
+        if abs(f(c)) <= toleran:
          break
       
     print("="*45)

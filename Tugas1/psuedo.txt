@@ -4,8 +4,22 @@ DEKALARASI :
 f(x), a, b, c, iterasi, toleransi
 
 ALGORITAMA :
-Read  (a,b,toleransi)
+input(a,b,toleransi)
 IF f(a) * f(b) < 0 :
    toleransi = 10^-4
    iterasi = 1
-   condition
+   while True:
+      c = (a + b) / 2
+      print(iterasi,c,f(c))
+      IF f(a) * f(c) > 0 :
+         a = c
+      IF f(b) * f(c) > 0 :
+         b = c
+      iterasi = iterasi + 1
+      IF abs(f(c)) <= toleransi :
+         break
+         END while
+    print(c)
+ELSE :
+   print("Nilai a dan b tidak diantara akar")   
+END
