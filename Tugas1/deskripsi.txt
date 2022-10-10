@@ -2,7 +2,7 @@
 2. Tentukan batas atas dan bawah yaitu a dan b
 3. Tentukan nilai toleran 
 4. Jika f(a) dikali f(b) kurang dari 0 maka ada akar diantara a dan b
-5. Jika tidak maka nilai a dan b tidak diantara akar 
+5. Jika tidak maka nilai a dan b tidak diantara akar
 6. Ambil nilai c diantara a dan b yaitu c = (a+b)/2
 7. Jika f(a) dikali f(c) kurang dari 0 maka ganti nilai b menjadi c
 8. Jika f(b) dikali f(c) kurang dari 0 maka ganti nilai a menjadi c
