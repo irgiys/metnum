@@ -21,7 +21,7 @@ def regulaFalsi(a, b , toleransi, n):
             break
         # Jika tidak maka iterasi akan terus berjalan sampai keadaan di atas.
         else:
-             print("%-4g %2s %-0.4f %2s %-0.4f %2s %-0.4f %2s %-0.5f\n" % (i,"" ,a, "", b, "", c,"", f(c)))
+             print("%-4g %2s %-0.4f %2s %-0.4f %2s %-0.4f %2s %-0.4f\n" % (i,"" ,a, "", b, "", c,"", f(c)))
         # Syarat metode tertutup, pada kasus ini Regula Falsi
         if (f(a)*f(c) < 0):
             b = c
