@@ -1,5 +1,7 @@
+"""
+   Persamaan = 4.15x^5-2.23x^3-6.35
+"""
 def f(x):
-   # 4.15*x**5-2.23*x**3-6.35
     return 4.15*x**5-2.23*x**3-6.35
 
 def regulaFalsi(a, b , toleransi, n):
@@ -7,30 +9,25 @@ def regulaFalsi(a, b , toleransi, n):
 
     print("-"*55)
     print("%-9s %-9s %-9s %-9s %-9s" % ("i", "a", "b", "c", "f(c)"))
-    print("-"*55) 
-    # Dilakukan iterasi sampai dengan n yang diinginkan
-    while(i <= n):
+    print("-"*55, "\n") 
+    while True:
         c = ((f(b)*a) - (f(a)*b)) / (f(b) - f(a))
+        error = abs(f(c)) 
         i += 1
-        error = abs(f(c))
-        # Jika f(c) = 0 atau akar telah ditemukan program akan berhenti.
-        # Jika |f(c)| < angka toleransi program akan berhenti. Artinya nilai toleransi/error telah dicapai.
-        if (abs(f(c)) <= toleransi):
-            print("-"*55) 
-            print("\nNilai c didapatkan pada iterasi ke %d, dengan nilai c = %0.4f dengan errror %0.4f" % (i,c,error))
-            break
-        # Jika tidak maka iterasi akan terus berjalan sampai keadaan di atas.
-        else:
-             print("%-4g %2s %-0.4f %2s %-0.4f %2s %-0.4f %2s %-0.4f\n" % (i,"" ,a, "", b, "", c,"", f(c)))
+        print("%-4g %2s %-0.4f %2s %-0.4f %2s %-0.4f %2s %-0.4f\n" % (i,"" ,a, "", b, "", c,"", f(c)))
         # Syarat metode tertutup, pada kasus ini Regula Falsi
-        if (f(a)*f(c) < 0):
-            b = c
-        else:
-            a = c
+        if f(a)*f(c) < 0 : b = c
+        if f(b)*f(c) < 0 : a = c
+       # Jika error <= toleransi atau iterasi lebih dari sama dengan n program akan berhenti. Artinya nilai toleransi/error telah dicapai.
+        if error <= toleransi or i >= n: break
+    
+    print("-"*55) 
+    print("\nNilai c didapatkan pada iterasi ke %d, dengan nilai c = %0.4f dengan errror %0.4f" % (i,c,error))
 
 a = float(input("Inputkan nilai atas  (a) = "))
 b = float(input("Inputkan nilai bawah (b) = "))
 e = float(input("Inputkan nilai toleransi = "))
 n = float(input("Inputkan batas iterasi   = "))
 
-regulaFalsi(a, b, e, n)
+if f(a) * f(b) < 0: regulaFalsi(a, b, e, n)
+else : print('Nilai a dan b tidak diantara akar.')
