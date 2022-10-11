@@ -35,4 +35,4 @@ def regulaFalsi(a, b , toleransi, n):
             b = c
     return
 
-regulaFalsi(1, 2, 0.0001, 10)
+regulaFalsi(1.1, 1.2, 0.0001, 10)
