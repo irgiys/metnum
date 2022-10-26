@@ -1,4 +1,5 @@
 import timeit
+# Secant
 f = lambda x : (4.15*(x**5)) - (2.53*(x**3)) - 6.35
 
 def secant(x0, x1 , e=0.00001):
