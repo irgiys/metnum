@@ -1,5 +1,4 @@
 import timeit
-# Newton Rapson
 f_rill = lambda x : 4.15*x**5 - 2.53*x**3 - 6.35
 f_turun = lambda x : 20.75*x**4 - 7.59*x**2
 
